@@ -7,7 +7,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
-        flat
+        icon
         href="https://github.com/austin-shaw"
         target="_blank"
       >
