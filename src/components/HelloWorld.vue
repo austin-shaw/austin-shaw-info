@@ -10,156 +10,49 @@
         <v-divider></v-divider>
       </v-flex>
     </v-layout>
+    
+    <v-layout 
+      v-for="(proj, i) in projects"
+      :key="i"
+      row
+    >
+      <v-flex>
+        <v-layout>
+          <v-flex xs11>
+            <h2 class="headline font-weight-bold mb-3">{{ proj.title }}</h2>
+            <p> {{ proj.desc }} </p>
+            
+            <!-- <v-chip small outline color="green" text-color="black">
+              <v-avatar>
+                <img src="../assets/logo.png">
+              </v-avatar>
+              Vue
+            </v-chip> -->
 
-    <v-layout row>
-      <v-flex xs11>
-        <h2 class="headline font-weight-bold mb-3">Notes Anywhere</h2>
-        <p>
-          A web app made with Vue.js. Keep track of all of your notes from any device.
-        </p>
-      </v-flex>
-      <v-divider vertical></v-divider>
-
-      <v-flex xs1>
-        <v-layout justify-space-between column fill-height>
-          <v-flex>
-            <v-btn flat icon href="https://github.com/austin-shaw/notes-anywhere" target="_blank">
-              <v-icon>fab fa-github</v-icon>
-            </v-btn>
           </v-flex>
-          <v-flex>
-            <v-btn flat icon href="https://www.notesanywhere.app" target="_blank">
-              <v-icon>fas fa-search</v-icon>
-            </v-btn>
-          </v-flex>
-        </v-layout>
-      </v-flex>
-    </v-layout>
+          <v-divider vertical></v-divider>
 
-    <v-layout row>
-      <v-flex xs11>
-        <v-divider></v-divider>
-        <h2 class="headline font-weight-bold mb-3">Selectel Wireless App</h2>
-        <p>
-          A native Android App commissioned by Selectel Wireless. Funcionality included ability to make payments on a plan and check a plan's status. 
-          Unfortunately, the App and accompanying API is no longer being maintained by Selectel.
-        </p>
-      </v-flex>
-      <v-divider vertical></v-divider>
-      <v-flex xs1 >
-        <v-divider></v-divider>
-        <v-layout justify-center column fill-height>
-          <!-- <v-flex>
-            <v-btn flat icon color="green" href="https://play.google.com/store/apps/details?id=stw.stwx20" target="_blank">
-              <v-icon>fab fa-github</v-icon>
-            </v-btn>
-          </v-flex> -->
-          <v-flex>
-            <v-btn flat icon color="green" href="https://play.google.com/store/apps/details?id=stw.stwx20" target="_blank">
-              <v-icon>fas fa-search</v-icon>
-            </v-btn>
+          <v-flex xs1 align-self-center>
+            <v-layout justify-space-between column fill-height>
+              <v-flex
+                v-for="(btn, j) in proj.buttons"
+                :key="j"
+                row
+              >
+                <v-btn 
+                  flat 
+                  icon 
+                  :color="btn.color"
+                  :href="btn.href" 
+                  target="_blank"
+                >
+                  <v-icon>{{ btn.icon }}</v-icon>
+                </v-btn>
+              </v-flex>
+            </v-layout>
           </v-flex>
         </v-layout>
-      </v-flex>
-    </v-layout>
-
-    <v-layout row>
-      <v-flex xs11>
         <v-divider></v-divider>
-        <h2 class="headline font-weight-bold mb-3">Selectel Wireless App</h2>
-        <p>
-          A native Android App commissioned by Selectel Wireless. Funcionality included ability to make payments on a plan and check a plan's status. 
-          Unfortunately, the App and accompanying API is no longer being maintained by Selectel.
-        </p>
-      </v-flex>
-      <v-divider vertical></v-divider>
-      <v-divider></v-divider>
-      
-      <v-flex xs1 align-self-center>
-        
-        <v-layout justify-space-around column fill-height>
-          <v-flex>
-            <v-btn flat icon color="blue" href="https://github.com/austin-shaw/notes-anywhere" target="_blank">
-              <v-icon>fab fa-github</v-icon>
-            </v-btn>
-          </v-flex>
-          <v-flex>
-            <v-btn flat icon color="green" href="https://www.notesanywhere.app" target="_blank">
-              <v-icon>fas fa-search</v-icon>
-            </v-btn>
-          </v-flex>
-        </v-layout>
-      </v-flex>
-    </v-layout>
-
-    <v-layout row>
-      <v-flex xs11>
-        <v-divider></v-divider>
-        <h2 class="headline font-weight-bold mb-3">This Site</h2>
-        <p>
-          A native Android App commissioned by Selectel Wireless. Funcionality included ability to make payments on a plan and check a plan's status. 
-          Unfortunately, the App and accompanying API is no longer being maintained by Selectel.
-        </p>
-      </v-flex>
-      <v-divider vertical></v-divider>
-      <v-flex xs1>
-        <v-divider></v-divider>
-        <v-layout justify-space-around column fill-height>
-          <v-flex>
-            <v-btn flat icon color="green" href="https://github.com/austin-shaw/notes-anywhere" target="_blank">
-              <v-icon>fab fa-github</v-icon>
-            </v-btn>
-          </v-flex>
-          <v-flex>
-            <v-btn flat icon color="green" href="https://www.notesanywhere.app" target="_blank">
-              <v-icon>fas fa-search</v-icon>
-            </v-btn>
-          </v-flex>
-        </v-layout>
-      </v-flex>
-    </v-layout>
-
-    <v-layout text-xs-center wrap>
-
-      <v-flex xs12 mb-2>
-      <v-divider></v-divider>
-      <h2 class="headline font-weight-bold mb-3">Selectel Wireless App</h2>
-
-
-        <p>
-          A native Android App commissioned by Selectel Wireless. Funcionality included ability to make payments on a plan and check a plan's status. 
-          Unfortunately, the App and accompanying API is no longer being maintained by Selectel.
-          
-          <br/>
-
-          <v-btn flat icon href="https://play.google.com/store/apps/details?id=stw.stwx20" target="_blank">
-            <v-icon>fas fa-search</v-icon>
-          </v-btn>
-
-          <v-btn flat icon color="green" href="https://github.com/austin-shaw/notes-anywhere" target="_blank">
-            <v-icon>fab fa-github</v-icon>
-          </v-btn>
-          <p/>
-        <v-divider></v-divider>
-      </v-flex>
-
-
-
-      <v-flex xs12 mb-5>
-
-    <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-layout>
       </v-flex>
     </v-layout>
   </v-container>
@@ -168,57 +61,62 @@
 <script>
 export default {
   data: () => ({
-    ecosystem: [
+    projects: [
       {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader'
+        title: 'Notes Anywhere',
+        desc: 'A web app made with Vue.js. Keep track of all of your notes from any device. Takes advantage of PWA to "install" the app on a users device.',
+        buttons: [
+          {
+            color: 'black',
+            href: 'https://www.notesanywhere.app',
+            icon: 'fas fa-search',
+          },
+          {
+            color: 'black',
+            href: 'https://github.com/austin-shaw/notes-anywhere',
+            icon: 'fab fa-github',
+          }
+        ]
       },
       {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify'
+        title: 'Selectel Wireless App',
+        desc: 'A native Android App I was contracted to build for Selectel Wireless. The App gave users the ability to make payments on a plan and check a plan"s status. Disclaimer: It was Selectel"s responsibilty to maintain the API that the App relied on. Unfortunately, the API only funtioned for a short time after the App was released, and Selectel elected not to fix it. It might be foolish of me to include this project in a portfolio as the ratings are not good, but i"m still proud of the App, and Selectel was happy with my work, even though the project was put on hold.',
+        buttons: [
+          {
+            color: 'black',
+            href: 'https://play.google.com/store/apps/details?id=stw.stwx20',
+            icon: 'fas fa-search',
+          },
+        ]
       },
       {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify'
-      }
+        title: 'This Site',
+        desc: 'This site itself is a web app made with Vue.js & Vuetify.',
+        buttons: [
+          {
+            color: 'black',
+            href: 'https://github.com/austin-shaw/notes-anywhere',
+            icon: 'fab fa-github',
+          },
+        ]
+      },
+      {
+        title: 'Various Wordpress Sites',
+        desc: 'This site itself is a web app made with Vue.js & Vuetify.',
+        buttons: [
+          {
+            color: 'black',
+            href: 'https://github.com/austin-shaw/notes-anywhere',
+            icon: 'fab fa-github',
+          },
+          {
+            color: 'black',
+            href: 'https://github.com/austin-shaw/notes-anywhere',
+            icon: 'fab fa-github',
+          }
+        ]
+      },
     ],
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com'
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com'
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuetifyjs.com'
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs'
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify'
-      }
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer'
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/layout/pre-defined'
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
-      }
-
-    ]
   })
 }
 </script>
