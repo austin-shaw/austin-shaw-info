@@ -1,29 +1,25 @@
 <template>
   <v-app>
-    <v-toolbar color="#3d5a6c" app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Austin</span>
-        <span class="font-weight-light"> Shaw</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
+    <!-- <v-toolbar color="#3d5a6c" app> -->
+      <v-toolbar>
+        <v-toolbar-title class="headline text-uppercase">
+          <span>Austin</span>
+          <span class="font-weight-light"> Shaw</span>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
 
-    <v-toolbar-items>
-      <v-btn flat>Projects</v-btn>
-      <v-btn flat>About Me</v-btn>
-      
-      <v-btn 
-        flat
-        href="https://github.com/austin-shaw"
-        target="_blank"
-      >
-        Github
-      </v-btn>
-    </v-toolbar-items>
-
-
-
+      <v-toolbar-items>
+        <v-btn flat>Projects</v-btn>
+        <v-btn flat>About Me</v-btn>
+        <v-btn
+          flat
+          href="https://github.com/austin-shaw"
+          target="_blank"
+        >
+          Github
+        </v-btn>
+      </v-toolbar-items>
     </v-toolbar>
-
     <v-content>
       <Portfolio/>
     </v-content>
