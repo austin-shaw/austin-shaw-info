@@ -2,7 +2,7 @@
   <v-container>
     <v-layout text-xs-center wrap>
       <v-flex>
-        <h1 class="display-1 font-weight-bold mb-3">Projects</h1>
+        <h1 class="display-1 font-weight-bold mb-3">Portfolio</h1>
 
         <p class="subheading font-weight-regular">
           A selection of applications and websites I've worked on over the years; some personal, some freelance.
@@ -10,8 +10,8 @@
         <v-divider></v-divider>
       </v-flex>
     </v-layout>
-    
-    <v-layout 
+
+    <v-layout
       v-for="(proj, i) in projects"
       :key="i"
       row
@@ -34,18 +34,18 @@
             <h2 class="headline font-weight-bold mb-3">{{ proj.title }}</h2>
             <p> {{ proj.desc }} </p>
 
-              <v-chip 
-                v-for="(chip, k) in proj.chips" 
-                :key="k" 
-                row
-                small 
-                outline 
-                :color="chip.color"
-                :text-color="chip.color"
-              >
-                <!-- <v-avatar><img :src="chip.icon"/></v-avatar> -->
-                {{ chip.text }}
-              </v-chip>
+            <v-chip
+              v-for="(chip, k) in proj.chips"
+              :key="k"
+              disable
+              small
+              outline
+              :color="chip.color"
+              :text-color="chip.color"
+            >
+              <v-avatar><img :src="chip.icon"/></v-avatar>
+              {{ chip.text }}
+            </v-chip>
 
           </v-flex>
           <v-divider vertical></v-divider>
@@ -57,11 +57,11 @@
                 :key="j"
                 row
               >
-                <v-btn 
-                  flat 
-                  icon 
+                <v-btn
+                  flat
+                  icon
                   :color="btn.color"
-                  :href="btn.href" 
+                  :href="btn.href"
                   target="_blank"
                 >
                   <v-icon>{{ btn.icon }}</v-icon>

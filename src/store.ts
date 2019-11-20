@@ -31,18 +31,18 @@ export default new Vuex.Store({
             icon: require('./assets/logo.png')
           },
           {
-            color: 'black',
+            color: 'orange',
             text: 'Typescript',
             icon: 'fab fa-github'
           },
           {
-            color: 'black',
-            text: 'C#',
+            color: 'purple',
+            text: 'dotnet core 3.0',
             icon: 'fab fa-github'
           },
           {
-            color: 'black',
             text: 'Swagger',
+            color: 'black',
             icon: 'fab fa-github'
           }
         ]
@@ -72,6 +72,23 @@ export default new Vuex.Store({
         ]
       },
       {
+        title: 'Notes Anywhere',
+        desc: 'A web app made with Vue.js. Keep track of all of your notes from any device. Takes advantage of PWA to "install" the app on a users device.',
+        image: require('./assets/na-logo.png'),
+        buttons: [
+          {
+            color: 'black',
+            href: 'https://www.notesanywhere.app',
+            icon: 'fas fa-search'
+          },
+          {
+            color: 'black',
+            href: 'https://github.com/austin-shaw/notes-anywhere',
+            icon: 'fab fa-github'
+          }
+        ]
+      },
+      {
         title: 'Central Community College',
         desc: 'Consulted on a new course covering Vue.js. Provided course materials for initial setup and getting started, and suggested projects for students. ',
         image: require('./assets/ccc-logo.jpg'),
@@ -92,23 +109,6 @@ export default new Vuex.Store({
             color: 'black',
             href: 'https://www.arlingtonyouthfoundation.com',
             icon: 'fas fa-search'
-          }
-        ]
-      },
-      {
-        title: 'Notes Anywhere',
-        desc: 'A web app made with Vue.js. Keep track of all of your notes from any device. Takes advantage of PWA to "install" the app on a users device.',
-        image: require('./assets/na-logo.png'),
-        buttons: [
-          {
-            color: 'black',
-            href: 'https://www.notesanywhere.app',
-            icon: 'fas fa-search'
-          },
-          {
-            color: 'black',
-            href: 'https://github.com/austin-shaw/notes-anywhere',
-            icon: 'fab fa-github'
           }
         ]
       },

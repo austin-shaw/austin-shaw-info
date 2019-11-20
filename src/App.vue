@@ -9,29 +9,30 @@
         <v-spacer></v-spacer>
 
       <v-toolbar-items>
-        <v-btn flat>Projects</v-btn>
-        <v-btn flat>About Me</v-btn>
         <v-btn
           flat
           href="https://github.com/austin-shaw"
           target="_blank"
         >
-          Github
+          <v-icon>fab fa-github</v-icon>
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
+      <!-- <About/> -->
       <Portfolio/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Portfolio from './components/Portfolio'
+import About from './views/About'
+import Portfolio from './views/Portfolio'
 
 export default {
   name: 'App',
   components: {
+    About,
     Portfolio
   },
   data () {
