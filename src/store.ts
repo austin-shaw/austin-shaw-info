@@ -9,7 +9,7 @@ export default new Vuex.Store({
       {
         title: 'MACC Mobile',
         desc: 'An enterprise web app made with Angular. This website is a ' +
-              'companion app to a customer management suite. The app has PWA ' +
+              'companion app to a customer management software suite. The app has PWA ' +
               'functionality and offline saving and editing capabilities.',
         image: require('./assets/mm-logo.png'),
         buttons: [
@@ -17,11 +17,6 @@ export default new Vuex.Store({
             color: 'black',
             href: 'https://dev.maccnet.com/',
             icon: 'fas fa-search'
-          },
-          {
-            color: 'black',
-            href: 'https://github.com/austin-shaw/vue-rest-test',
-            icon: 'fab fa-github'
           }
         ],
         chips: [
@@ -49,7 +44,11 @@ export default new Vuex.Store({
       },
       {
         title: 'Selectel Wireless App',
-        desc: 'A native Android App I was contracted to build for Selectel Wireless. The App gave users the ability to make payments on a plan and check a plan"s status. Disclaimer: It was Selectel"s responsibilty to maintain the API that the App relied on. Unfortunately, the API only funtioned for a short time after the App was released, and Selectel elected not to fix it. It might be foolish of me to include this project in a portfolio as the ratings are not good, but i"m still proud of the App, and Selectel was happy with my work, even though the project was put on hold.',
+        desc: "A native Android App I was contracted to build for Selectel Wireless. The " +
+              "App gave users the ability to make payments on a plan and check a plan's status. "+
+              "I turned the code over to Selectel after I was finished and, "+
+              "unfortunately, the app is not currently functioning. However, you can still "+
+              "go to the app's Google page and see pictures of it.",
         image: require('./assets/sl-logo.jpg'),
         buttons: [
           {
@@ -61,7 +60,7 @@ export default new Vuex.Store({
       },
       {
         title: "Nebraska's Natural Resource District",
-        desc: "Consulted Nebraskas's NRD on a new database design and the conversion of old data into the new database.",
+        desc: "Consulted Nebraskas' NRD on a new database design and the conversion of old data into the new database.",
         image: require('./assets/nrd-logo.png'),
         buttons: [
           {
@@ -119,19 +118,7 @@ export default new Vuex.Store({
         buttons: [
           {
             color: 'black',
-            href: 'https://www.silentmaelstrom.com',
-            icon: 'fas fa-search'
-          }
-        ]
-      },
-      {
-        title: 'Rest API Test',
-        desc: 'A web app made with Vue.js. Test web apis from a browser application - comes in handy when testing CORS.',
-        image: require('./assets/smoke-test-logo-alt-9.png'),
-        buttons: [
-          {
-            color: 'black',
-            href: 'https://www.restapitest.com',
+            href: 'https://www.smoketest.app',
             icon: 'fas fa-search'
           },
           {
@@ -140,8 +127,26 @@ export default new Vuex.Store({
             icon: 'fab fa-github'
           }
         ]
-      }
-    ]
+      },
+      // {
+      //   title: 'Rest API Test',
+      //   desc: 'A web app made with Vue.js. Test web apis from a browser application - comes in handy when testing CORS.',
+      //   image: require('./assets/smoke-test-logo-alt-9.png'),
+      //   buttons: [
+      //     {
+      //       color: 'black',
+      //       href: 'https://www.restapitest.com',
+      //       icon: 'fas fa-search'
+      //     },
+      //     {
+      //       color: 'black',
+      //       href: 'https://github.com/austin-shaw/vue-rest-test',
+      //       icon: 'fab fa-github'
+      //     }
+      //   ]
+      // }
+    ],
+    myImage: require('./assets/me.jpg')
   },
   mutations: {
 

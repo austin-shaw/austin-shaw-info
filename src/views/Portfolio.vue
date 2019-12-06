@@ -33,7 +33,7 @@
           <v-flex xs10 ml-2>
             <h2 class="headline font-weight-bold mb-3">{{ proj.title }}</h2>
             <p> {{ proj.desc }} </p>
-
+<!-- 
             <v-chip
               v-for="(chip, k) in proj.chips"
               :key="k"
@@ -45,7 +45,7 @@
             >
               <v-avatar><img :src="chip.icon"/></v-avatar>
               {{ chip.text }}
-            </v-chip>
+            </v-chip> -->
 
           </v-flex>
           <v-divider vertical></v-divider>
@@ -87,5 +87,9 @@ export default {
 </script>
 
 <style>
+/* .v-image{
+  filter: grayscale(100%);
+} */
+
 
 </style>
